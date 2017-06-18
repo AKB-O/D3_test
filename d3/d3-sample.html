@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+    
+     <head>
+         <meta charset="utf-8">
+         <title>D3.js</title>
+         <link rel="stylesheet" type="text/css" href="stylesheet.css">
+     </head>
+    　
+    <body>
+    <header>
+        <div class=HEAD>
+             <div class="text1">
+                <h1>チカチカコンソール</h1>
+             </div>
+                <div class="test1">
+                <p></p>
+             </div>
+        </div>
+     </header>
+     <div class = t1>
+        <p></p>
+     </div>
+     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>        
+    
+     <script>
+
+    var dataset = [30,30,30,30,30,30,30,30] ;
+    var w1 = 1000 ;
+    var h1 = 100 ;
+
+    var svg1 = d3.select("body").append("svg").attr({width:w1 , height:h1}) 
+    svg1.selectAll("circle")
+       .data(dataset)
+       .enter()
+       .append("circle")
+       .attr({
+        cx:function(d,i){return 50 + (i * 100);},
+        cy:h1 / 2,
+        r:0,
+        fill:"blue"
+       })
+       .transition()
+       .delay(function(d , i) {
+           return 50 + i * 300
+       })
+       .duration(1000)
+       .ease("bounce")
+       .attr({
+        r:function (d) {
+            return d;
+        }
+        
+       })
+    var text1 = d3.select("body");
+    text1.append("p")
+         .text("うんち")
+         .transition()
+         .attr("px","100px")
+    </script>
+    
+    </body>
+</html>
+    
+    
