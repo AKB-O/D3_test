@@ -17,8 +17,8 @@
        .ease("bounce")
        .each("start",function(){
         d3.select("this")
-          .transition()
-          .attr({
+        .attr({
+          cx:function(d,i){return 50 + (i * 100) ;},
           cy:h1,
           r:0,
           fill:"green"
