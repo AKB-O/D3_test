@@ -16,7 +16,7 @@
        .duration(1000)
        .ease("bounce")
        .each("start",function(){
-        d3.select("this")
+        d3.select(this)
         .attr({
           cx:function(d,i){return 50 + (i * 100) ;},
           cy:h1,
@@ -31,7 +31,7 @@
         fill:"blue"
        })
        .each("end",function() {
-         d3.select("this")
+         d3.select(this)
           .transition()
           .duration(800)
           .attr({
