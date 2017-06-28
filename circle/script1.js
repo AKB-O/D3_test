@@ -29,16 +29,15 @@
         cy:h1 / 2,
         r: function (d) {return d;} ,
         fill:"blue"
-       })
-       .each("end",function() {
-         d3.select(this)
-          .transition()
-          .duration(800)
-          .attr({
-            fill:"pink",
-            r:0,
-            cy:0
-          });
+       });
+       .each("end",function(){
+        d3.select(this)
+        .attr({
+          cx:0,
+          cy:0,
+          r:0,
+          fill:"white"
+        });
        });
 
 /*    var p1 = d3.select("body");
