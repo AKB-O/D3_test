@@ -8,3 +8,28 @@
 body{
 	background-color: #F0FFFF;
 }
+.wrapper {
+  width: 100%;
+  line-height: 1.7;		
+}
+
+#container {
+  float: left;
+  width: 100%;		
+}
+#primary {
+  float: right;
+  width: 100%;
+  margin: 10px 0 10px -145px;  background: #C7D;
+}
+#content {
+  margin-left: 155px;
+  padding: 10px;
+  background:#cdd;
+}
+#secondary {
+  float: left;
+  width: 145px;
+  margin: 10px 0 10px 0;	
+  background:#9FC;	
+}
